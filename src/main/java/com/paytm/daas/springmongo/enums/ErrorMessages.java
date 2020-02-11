@@ -16,29 +16,5 @@ public enum ErrorMessages {
         this.message = message;
     }
 
-    public int getCode() {
-        return code;
-    }
-
-    public HttpStatus getHttpStatus() {
-        return httpStatus;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setCode(int code) {
-        this.code = code;
-    }
-
-    public void setHttpStatus(HttpStatus httpStatus) {
-        this.httpStatus = httpStatus;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-    
     
 }
