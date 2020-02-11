@@ -3,40 +3,42 @@ package com.paytm.daas.springmongo.enums;
 import org.springframework.http.HttpStatus;
 
 public enum ErrorMessages {
-
-    NO_DATA_FOR_GIVEN_TXN_TYPE(1, HttpStatus.BAD_REQUEST, "NO Data exist for given Transaction type"),
-    NO_DATA_FOR_GIVEN_ID(2, HttpStatus.BAD_REQUEST, "No Data for given ID so cannot update..."),
-    NO_DATA_FOUND_FOR_GIVEN_ID(3, HttpStatus.BAD_REQUEST, "No Data exist for given ID."),
-    NO_DATA_FOUND_FOR_GIVEN_BANK(4, HttpStatus.BAD_REQUEST, "NO Data exist for given bank name"),
-    INVALID_BANK(5, HttpStatus.BAD_REQUEST, "Invalid Bank Name."),
-    INVALID_SEVERITY(6, HttpStatus.BAD_REQUEST, "No Data found for this Given severity");
+    
+    INVALID_SEVERITY(1, HttpStatus.BAD_REQUEST, "No data found for given severity." );
     
     int code;
-    HttpStatus status;
+    HttpStatus httpStatus;
     String message;
-
-    ErrorMessages(int code, HttpStatus status, String message) {
+    
+    private ErrorMessages(int code, HttpStatus httpStatus, String message) {
         this.code = code;
-        this.status = status;
-        this.message = message;     
+        this.httpStatus = httpStatus;
+        this.message = message;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public HttpStatus getHttpStatus() {
+        return httpStatus;
     }
 
     public String getMessage() {
         return message;
     }
-    public int getCode() {
-        return code;
-    }
-    public HttpStatus getStatus() {
-        return status;
-    }
-    public void setMessage(String message) {
-        this.message = message;
-    }
+
     public void setCode(int code) {
         this.code = code;
     }
-    public void setStatus(HttpStatus status) {
-        this.status = status;
+
+    public void setHttpStatus(HttpStatus httpStatus) {
+        this.httpStatus = httpStatus;
     }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+    
+    
 }
