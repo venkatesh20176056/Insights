@@ -16,6 +16,10 @@ public enum ErrorMessages {
         this.message = message;
     }
     
+    private int get1 () {
+        return 1;
+    }
+    
     private int getMyNumber() {
         return 20;
     }
