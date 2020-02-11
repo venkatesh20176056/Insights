@@ -15,6 +15,9 @@ public enum ErrorMessages {
         this.httpStatus = httpStatus;
         this.message = message;
     }
-
+    
+    private int getMyNumber() {
+        return 20;
+    }
     
 }
